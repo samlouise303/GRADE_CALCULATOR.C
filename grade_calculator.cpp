@@ -27,9 +27,10 @@ char getLetterGrade(float finalGrade) {
 }
 void displayReport(float quizScore, float examScore,
                    float finalGrade, char letterGrade) {
-    printf("\nGrade Report\n");
+    printf("\n=======Grade Report=======\n");
     printf("Quiz Score: %.2f\n", quizScore);
     printf("Exam Score: %.2f\n", examScore);
     printf("Final Grade: %.2f\n", finalGrade);
     printf("Letter Grade: %c\n", letterGrade);
+     printf("\n==========================\n");
 }
