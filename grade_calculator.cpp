@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 float getScore(char scoreType[]) {
     float score;
     printf("Enter %s score: ", scoreType);
@@ -8,11 +7,9 @@ float getScore(char scoreType[]) {
     return score;
 }
 
-
 float calculateFinalGrade(float quizScore, float examScore) {
     return (quizScore * 0.4) + (examScore * 0.6);
 }
-
 
 char getLetterGrade(float finalGrade) {
     if (finalGrade >= 90)
@@ -33,4 +30,19 @@ void displayReport(float quizScore, float examScore,
     printf("Final Grade: %.2f\n", finalGrade);
     printf("Letter Grade: %c\n", letterGrade);
      printf("\n==========================\n");
+}
+int main() {
+    float quizScore, examScore, finalGrade;
+    char letterGrade;
+
+    quizScore = getScore("Quiz");
+    examScore = getScore("Exam");
+    
+    finalGrade = calculateFinalGrade(quizScore, examScore);
+
+    letterGrade = getLetterGrade(finalGrade);
+
+    displayReport(quizScore, examScore, finalGrade, letterGrade);
+
+    return 0;
 }
